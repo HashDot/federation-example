@@ -1,0 +1,36 @@
+{
+  "name": "@service/customer",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "14.14.37",
+    "typescript": "4.2.3",
+    "@types/isomorphic-fetch": "0.0.34",
+    "nodemon": "2.0.7",
+    "ts-node": "9.1.1",
+    "dotenv": "8.2.0"
+  },
+  "dependencies": {
+    "fastify": "3.14.1",
+    "fastify-cors": "5.2.0",
+    "mercurius": "7.3.2",
+    "graphql": "15.5.0",
+    "@graphql-tools/wrap": "7.0.5",
+    "@graphql-tools/delegate": "7.1.1",
+    "isomorphic-fetch": "3.0.0",
+    "@pkg/vault": "1.0.0",
+    "reflect-metadata": "0.1.13",
+    "mongodb": "3.6.5",
+    "@pkg/federated-server": "1.0.0",
+    "@pkg/scalar": "1.0.0",
+    "@pkg/middleware": "1.0.0",
+    "joiful": "3.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "NODE_ENV=development nodemon --exec ts-node -r dotenv/config src/index.ts"
+  }
+}

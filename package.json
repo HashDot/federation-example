@@ -1,0 +1,22 @@
+{
+  "name": "federation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "service:gateway": "yarn workspace @service/gateway dev",
+    "service:base": "yarn workspace @service/base dev",
+    "service:customer": "yarn workspace @service/customer dev",
+    "service:all": "concurrently \"yarn service:base\" \"yarn service:customer\" \"yarn service:gateway\""
+  },
+  "devDependencies": {
+    "lerna": "4.0.0",
+    "concurrently": "6.0.0"
+  }
+}
